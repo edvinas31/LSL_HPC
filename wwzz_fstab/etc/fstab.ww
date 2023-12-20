@@ -1,0 +1,10 @@
+rootfs / tmpfs defaults 0 0
+devpts /dev/pts devpts gid=5,mode=620 0 0
+tmpfs /run/shm tmpfs defaults 0 0
+sysfs /sys sysfs defaults 0 0
+proc /proc proc defaults 0 0
+# Mount for external nfs-Share
+10.2.1.2:/homes /export/home nfs defaults 0 0
+10.2.1.2:/apps /export/apps nfs defaults 0 0
+# Mount of warewulf nfs-share
+158.129.212.197:/etc/slurm /etc/slurm nfs defaults 0 0

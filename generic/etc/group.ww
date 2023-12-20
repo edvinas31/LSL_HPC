@@ -1,0 +1,2 @@
+{{IncludeFrom $.Container "/etc/group"}}
+{{Include "/etc/group"}}
