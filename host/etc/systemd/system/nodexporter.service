@@ -1,0 +1,18 @@
+[Unit]
+Description=Node Exporter Prometheus
+Wants=network-online.target export-apps.mount
+After=network-online.target export-apps.mount
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/export/apps/prometheus/node_exporter/node_exporter
+RemainAfterExit=yes
+
+SyslogIdentifier=prometheus
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
