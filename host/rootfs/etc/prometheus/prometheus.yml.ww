@@ -42,7 +42,10 @@ scrape_configs:
   - job_name: cluster
     static_configs:
     {{- range $node := $.AllNodes}}
-      - targets: ['{{ $node.Id.Get }}:9100']
+      - targets: ['{{ $node.Id }}:9100']
         labels:
-          instance: '{{ $node.Id.Get }}'
+          instance: '{{ $node.Id }}'
     {{- end }}
+      - targets: ['localhost:9100']
+        labels:
+          instance: warewulf

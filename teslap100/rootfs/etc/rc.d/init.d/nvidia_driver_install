@@ -6,3 +6,7 @@ done
 
 /export/apps/src/nvidia_drivers/NVIDIA-Linux-x86_64-470.223.02.run --disable-nouveau --silent --run-nvidia-xconfig --no-drm --ui=none --accept-license
 /usr/bin/nvidia-smi -c 3
+
+# Laikinai, kol slurmd gauna gres.conf su File=/dev/nvidia1 (panasu, kad is image /var/spool/slurmd/conf-cache/gres.conf )
+ln -s /dev/nvidia0 /dev/nvidia1
+
