@@ -1,0 +1,11 @@
+[Unit]
+Description=Modify slurmd service to restart and wait for nvidia driver install
+Before=slurmd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/modify_slurmd.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
