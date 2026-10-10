@@ -14,8 +14,6 @@ RemainAfterExit=yes
 TimeoutStartSec=15min
 ExecStart=/export/apps/src/nvidia_drivers/NVIDIA-Linux-x86_64-595.71.05.run --disable-nouveau --silent --run-nvidia-xconfig --no-drm --ui=none --accept-license
 ExecStart=/usr/bin/nvidia-smi -c 3
-# Laikinai, kol slurmd gauna gres.conf su File=/dev/nvidia1 (panasu, kad is image /var/spool/slurmd/conf-cache/gres.conf )
-ExecStart=/usr/bin/ln -sf /dev/nvidia0 /dev/nvidia1
 
 [Install]
 WantedBy=multi-user.target
