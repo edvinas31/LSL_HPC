@@ -12,7 +12,7 @@ Type=oneshot
 RemainAfterExit=yes
 # Building the kernel module takes a few minutes.
 TimeoutStartSec=15min
-ExecStart=/export/apps/src/nvidia_drivers/NVIDIA-Linux-x86_64-470.223.02.run --disable-nouveau --silent --run-nvidia-xconfig --no-drm --ui=none --accept-license
+ExecStart=/export/apps/src/nvidia_drivers/NVIDIA-Linux-x86_64-580.178.04.run --kernel-module-type=proprietary --disable-nouveau --silent --run-nvidia-xconfig --no-drm --ui=none --accept-license
 ExecStart=/usr/bin/nvidia-smi -c 3
 
 [Install]
